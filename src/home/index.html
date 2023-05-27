@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <title>Recarts Imaging Sdn. Bhd.</title>
+    <meta
+      name="description"
+      content="Recarts is the #1 leading supplier, wholesaler, retailer and service provider (Rent Or Service) for branded printer and photocopy machines in Malaysia since 1985."
+    />
+    <meta name="author" content="WANGLONG Technologies Sdn. Bhd." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="../assets/css/general-sans.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </head>
+  <body
+    x-data="{ isMenuOpen: false }"
+    class="antialiased"
+    x-bind:class=" isMenuOpen ? 'overflow-hidden lg:overflow-auto' : ''"
+  >
+    <header class="relative z-50 bg-transparent">
+      <nav
+        class="flex items-center justify-between h-24 px-4 mx-auto sm:px-6 max-w-7xl lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="/home" class="-m-1.5 p-1.5 mt-1">
+            <span class="sr-only">Recarts Imaging Sdn. Bhd.</span>
+            <video width="300" height="40" autoplay loop muted>
+              <source src="../assets/video/logo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            @click="isMenuOpen = true"
+            type="button"
+            class="inline-flex items-center justify-center p-2 text-gray-700 bg-white rounded-full"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-8">
+          <a
+            href="/about"
+            class="text-base font-medium text-gray-200 transition hover:text-white"
+            >About us</a
+          >
+          <a
+            href="/products"
+            class="text-base font-medium text-gray-100 transition hover:text-white"
+            >Products</a
+          >
+          <a
+            href="/services"
+            class="text-base font-medium text-gray-200 transition hover:text-white"
+            >Services</a
+          >
+          <a
+            href="/contact"
+            class="text-base font-medium text-gray-100 transition hover:text-white"
+            >Contact us</a
+          >
+          <a
+            href="https://recarts.com.my/print-on-the-go/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center text-base font-medium text-gray-200 transition hover:text-white"
+            >Print on the go
+            <svg
+              class="ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.667"
+                d="m5.833 14.167 8.334-8.334m0 0H5.833m8.334 0v8.334"
+              />
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div
+          x-cloak
+          x-show="isMenuOpen"
+          x-transition.opacity.duration.150ms
+          class="fixed inset-0 z-10 bg-gray-900/50"
+        ></div>
+        <div
+          x-cloak
+          x-show="isMenuOpen"
+          x-transition:enter="transition ease-in-out duration-200 transform"
+          x-transition:enter-start="translate-x-10 opacity-0"
+          x-transition:enter-end="translate-x-0 opacity-100"
+          x-transition:leave="transition ease-in-out duration-200"
+          x-transition:leave-start="opacity-100 translate-x-0"
+          x-transition:leave-end="opacity-0 translate-x-10"
+          @click.outside="isMenuOpen = false"
+          class="fixed inset-y-0 right-0 z-10 flex flex-col w-full max-w-sm px-4 py-6 overflow-y-auto bg-white sm:px-6 sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-end mt-1">
+            <button
+              @click="isMenuOpen = false"
+              type="button"
+              class="p-2 text-gray-700 bg-gray-100 border border-gray-200 rounded-full"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flow-root h-full mt-6">
+            <div class="flex flex-col justify-between flex-1 h-full -my-6">
+              <div class="py-6 space-y-2">
+                <a
+                  href="/home"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Home</a
+                >
+                <a
+                  href="/about"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >About us</a
+                >
+                <a
+                  href="/products"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Products</a
+                >
+                <a
+                  href="/services"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Services</a
+                >
+                <a
+                  href="/contact"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Contact us</a
+                >
+
+                <a
+                  href="/wall-panels"
+                  class="flex items-center px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Print on the go
+                  <svg
+                    class="ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.667"
+                      d="m5.833 14.167 8.334-8.334m0 0H5.833m8.334 0v8.334"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="hero" class="-mt-40">
+        <div class="relative pt-24 overflow-hidden bg-black">
+          <div
+            class="absolute right-[-10%] bottom-[-50%] lg:-bottom-1/4 m-auto max-w-[1440px] max-h-[600px] opacity-40"
+          >
+            <img
+              src="../assets/images/light-accent.png"
+              class="w-full h-full"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="relative z-10 max-w-4xl px-6 pt-24 mx-auto lg:max-w-7xl sm:px-6 sm:pt-32 lg:pt-36 lg:px-8"
+          >
+            <div
+              class="relative z-10 flex flex-col items-center justify-center h-full max-w-4xl px-6 mx-auto lg:max-w-7xl sm:px-6 lg:px-8"
+            >
+              <h1
+                class="text-4xl leading-tight text-center text-white font-heading sm:text-5xl xl:text-6xl"
+              >
+                HP A3 Multifunction Printer
+              </h1>
+              <p
+                class="max-w-xs mt-6 text-lg text-center text-gray-100 sm:max-w-md sm:text-xl"
+              >
+                Affordable. Performance. Quality.
+              </p>
+              <div class="flex items-center mt-10 gap-x-4">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://youtu.be/QcoLO09KxM8"
+                  class="inline-flex items-center h-12 pl-6 pr-8 text-sm font-medium leading-6 transition bg-white rounded-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-gray-100"
+                >
+                  <svg
+                    class="w-4 h-4 mr-2"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 6.47715 18.0228 2 12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22Z"
+                      stroke="#000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M10 8.96533C10 8.48805 10 8.24941 10.0997 8.11618C10.1867 8.00007 10.3197 7.92744 10.4644 7.9171C10.6304 7.90525 10.8311 8.03429 11.2326 8.29239L15.9532 11.3271C16.3016 11.551 16.4758 11.663 16.5359 11.8054C16.5885 11.9298 16.5885 12.0702 16.5359 12.1946C16.4758 12.337 16.3016 12.449 15.9532 12.6729L11.2326 15.7076C10.8311 15.9657 10.6304 16.0948 10.4644 16.0829C10.3197 16.0726 10.1867 15.9999 10.0997 15.8838C10 15.7506 10 15.512 10 15.0347V8.96533Z"
+                      stroke="#000"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Demo
+                </a>
+                <a
+                  href="/contact"
+                  class="inline-flex items-center h-12 px-6 text-sm font-medium text-white transition rounded-lg bg-bloodMoon-600 hover:bg-bloodMoon-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-bloodMoon-600"
+                  >Enquiry now</a
+                >
+              </div>
+            </div>
+            <div class="mt-16">
+              <img
+                class="mx-auto"
+                src="../assets/images/products/hp-a3.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about-cta" class="relative z-10">
+        <div
+          class="max-w-3xl px-4 py-12 mx-auto lg:max-w-7xl sm:px-6 lg:px-8 sm:py-16 lg:py-24"
+        >
+          <div class="grid lg:grid-cols-12 lg:gap-8">
+            <div class="lg:col-span-4">
+              <h2 class="text-2xl font-heading sm:text-3xl">
+                Expert Copier & Printer Solutions in Malaysia
+              </h2>
+            </div>
+            <div class="w-full h-full lg:col-start-6 lg:col-span-7">
+              <p class="mt-6 text-base text-gray-700 lg:mt-0 lg:text-lg">
+                A high quality advanced imaging solutions system requires expert
+                service & support to save time and eliminate disruption to your
+                business operations. We promise you the expertise of our fully
+                trained & experienced service technicians in photocopy machine
+                and printer to assist in the shortest response time possible.
+              </p>
+              <a
+                href="../about/"
+                class="inline-flex items-center justify-center h-12 px-6 mt-8 text-sm font-medium text-white transition rounded-lg bg-bloodMoon-600 hover:bg-bloodMoon-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-bloodMoon-600"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="featured-products">
+        <div class="max-w-4xl px-4 mx-auto lg:max-w-7xl sm:px-6 lg:px-8">
+          <div
+            class="w-full h-1 pt-12 border-t border-gray-300 sm:pt-16 lg:pt-24"
+          ></div>
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-heading sm:text-3xl">Featured Products</h2>
+            <a
+              href="/projects"
+              class="items-center hidden h-12 pl-6 pr-4 text-sm font-medium text-black transition bg-transparent border border-gray-300 rounded-lg sm:inline-flex hover:bg-gray-100 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-gray-200"
+              >Explore all
+              <svg
+                class="w-4 h-4 ml-2"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 6L16 12L10 18"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="relative pb-16 max-w-4xl mx-auto mt-10 sm:pb-24 lg:pb-32 lg:max-w-[1320px]"
+        >
+          <div
+            class="absolute inset-y-0 left-0 z-10 hidden md:block lg:hidden w-24 sm:w-40 h-full pointer-events-none xl:block md:w-52 lg:w-72 bg-gradient-to-r from-white from-10% to-transparent"
+          ></div>
+          <div
+            class="absolute inset-y-0 right-0 z-10 w-24 sm:w-40 h-full pointer-events-none lg:w-72 bg-gradient-to-r md:w-52 from-transparent to-90% to-white/70 sm:to-white"
+          ></div>
+          <div
+            class="px-4 overflow-hidden sm:px-6 lg:px-8 swiper-container xl:pl-0"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a
+                  href="/product?id=1"
+                  class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl"
+                >
+                  <div
+                    class="transition h-72 grayscale group-hover:grayscale-0"
+                  >
+                    <img
+                      class="object-contain w-full h-full"
+                      src="../assets/images/products/Canon-IR-ADV-4235.jpeg"
+                      alt="Canon iR-ADV 4235"
+                    />
+                  </div>
+                  <h3 class="text-xl text-center font-heading line-clamp-2">
+                    Canon iR-ADV 4235
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="/product?id=1"
+                  class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl"
+                >
+                  <div
+                    class="transition h-72 grayscale group-hover:grayscale-0"
+                  >
+                    <img
+                      class="object-contain w-full h-full"
+                      src="../assets/images/products/Canon-IR-ADV-6265.jpeg"
+                      alt="Canon iR-ADV 4235"
+                    />
+                  </div>
+                  <h3 class="text-xl text-center font-heading line-clamp-2">
+                    Canon iR-ADV 4235
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="/product?id=1"
+                  class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl"
+                >
+                  <div
+                    class="transition h-72 grayscale group-hover:grayscale-0"
+                  >
+                    <img
+                      class="object-contain w-full h-full"
+                      src="../assets/images/products/Canon-IR-ADV-8295.jpeg"
+                      alt="Canon iR-ADV 4235"
+                    />
+                  </div>
+                  <h3 class="text-xl text-center font-heading line-clamp-2">
+                    Canon iR-ADV 4235
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a
+                  href="/product?id=1"
+                  class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl"
+                >
+                  <div
+                    class="transition h-72 grayscale group-hover:grayscale-0"
+                  >
+                    <img
+                      class="object-contain w-full h-full"
+                      src="../assets/images/products/Canon-IR-ADV-C5235.jpeg"
+                      alt="Canon iR-ADV 4235"
+                    />
+                  </div>
+                  <h3 class="text-xl text-center font-heading line-clamp-2">
+                    Canon iR-ADV 4235
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide" aria-hidden="true">
+                <a
+                  href="/product?id=1"
+                  class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl"
+                >
+                  <div
+                    class="transition h-72 grayscale group-hover:grayscale-0"
+                  >
+                    <img
+                      class="object-contain w-full h-full"
+                      src="../assets/images/products/Canon-IR-ADV-8295.jpeg"
+                      alt="Canon iR-ADV 4235"
+                    />
+                  </div>
+                  <h3 class="text-xl text-center font-heading line-clamp-2">
+                    Canon iR-ADV 4235
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide" aria-hidden="true">
+                <a
+                  href="/product?id=1"
+                  class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl"
+                >
+                  <div
+                    class="transition h-72 grayscale group-hover:grayscale-0"
+                  >
+                    <img
+                      class="object-contain w-full h-full"
+                      src="../assets/images/products/Canon-IR-ADV-4235.jpeg"
+                      alt="Canon iR-ADV 4235"
+                    />
+                  </div>
+                  <h3 class="text-xl text-center font-heading line-clamp-2">
+                    Canon iR-ADV 4235
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide" aria-hidden="true">
+                <a
+                  href="/product?id=1"
+                  class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl"
+                >
+                  <div
+                    class="transition h-72 grayscale group-hover:grayscale-0"
+                  >
+                    <img
+                      class="object-contain w-full h-full"
+                      src="../assets/images/products/Canon-IR-ADV-8295.jpeg"
+                      alt="Canon iR-ADV 4235"
+                    />
+                  </div>
+                  <h3 class="text-xl text-center font-heading line-clamp-2">
+                    Canon iR-ADV 4235
+                  </h3>
+                </a>
+              </div>
+              <div class="swiper-slide" aria-hidden="true">
+                <a
+                  href="/product?id=1"
+                  class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl"
+                >
+                  <div
+                    class="transition h-72 grayscale group-hover:grayscale-0"
+                  >
+                    <img
+                      class="object-contain w-full h-full"
+                      src="../assets/images/products/Canon-IR-ADV-4235.jpeg"
+                      alt="Canon iR-ADV 4235"
+                    />
+                  </div>
+                  <h3 class="text-xl text-center font-heading line-clamp-2">
+                    Canon iR-ADV 4235
+                  </h3>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="cta">
+        <div
+          class="px-4 pb-12 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:pb-16 lg:pb-24"
+        >
+          <div
+            class="relative px-6 py-10 overflow-hidden bg-black sm:px-16 sm:py-16 rounded-xl"
+          >
+            <div
+              class="absolute right-[-10%] -bottom-1/4 m-auto max-w-[1440px] max-h-[600px] opacity-30"
+            >
+              <img
+                src="../assets/images/light-accent.png"
+                class="w-full h-full"
+                alt=""
+              />
+            </div>
+            <div
+              class="relative z-10 lg:flex lg:items-center lg:justify-between"
+            >
+              <div class="max-w-xl mx-auto text-center lg:text-left lg:mx-0">
+                <h2 class="text-2xl text-white font-heading sm:text-3xl">
+                  Looking for Top-Notch Imaging Support?
+                </h2>
+                <p class="mt-4 text-base text-gray-200 sm:text-lg">
+                  Our technicians ensure minimal disruptions and optimal
+                  efficiency.
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-center mt-10 gap-x-6 lg:mt-0 lg:flex-shrink-0"
+              >
+                <a
+                  href="/contact"
+                  class="inline-flex items-center h-12 px-6 text-sm font-medium text-black transition rounded-lg bg-gray-50 hover:bg-white focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-white/50"
+                  >Connect with Experts</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="px-4 pt-4 pb-12 mx-auto lg:pt-12 sm:px-6 max-w-7xl lg:px-8">
+        <div class="lg:flex lg:justify-between">
+          <a href="/home" class="-m-1.5 p-1.5 mt-1">
+            <span class="sr-only">Recarts Imaging Sdn. Bhd.</span>
+            <video width="300" height="40" autoplay loop muted>
+              <source src="../assets/video/logo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="hidden grid-cols-2 gap-8 mt-16 xl:col-span-2 xl:mt-0">
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold leading-6 text-white">
+                  Solutions
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Marketing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Analytics</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Commerce</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Insights</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-white">
+                  Support
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Pricing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Documentation</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Guides</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >API Status</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold leading-6 text-white">
+                  Company
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Jobs</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Press</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Partners</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-white">
+                  Legal
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Claim</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Privacy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Terms</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap items-center mt-8 gap-x-8 gap-y-6 sm:justify-normal lg:mt-0"
+          >
+            <a
+              href="/about"
+              class="text-base font-medium text-gray-200 transition hover:text-white"
+              >About us</a
+            >
+            <a
+              href="/products"
+              class="text-base font-medium text-gray-100 transition hover:text-white"
+              >Products</a
+            >
+            <a
+              href="/services"
+              class="text-base font-medium text-gray-200 transition hover:text-white"
+              >Services</a
+            >
+            <a
+              href="/contact"
+              class="text-base font-medium text-gray-100 transition hover:text-white"
+              >Contact us</a
+            >
+            <a
+              href="https://recarts.com.my/print-on-the-go/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center text-base font-medium text-gray-200 transition hover:text-white"
+              >Print on the go
+              <svg
+                class="ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.667"
+                  d="m5.833 14.167 8.334-8.334m0 0H5.833m8.334 0v8.334"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="pt-8 mt-8 border-t border-gray-800 md:flex md:items-center md:justify-between"
+        >
+          <p class="text-sm leading-5 text-gray-400">
+            &copy; 2023 Recarts Imaging Sdn Bhd 201601005895 (1176821-T). All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+
+          // Responsive breakpoints
+          breakpoints: {
+            // xs: 480px
+            480: {
+              slidesPerView: 1.5,
+            },
+            // sm: 640px
+            640: {
+              slidesPerView: 2,
+            },
+            // md: 768px
+            768: {
+              slidesPerView: 2.5,
+            },
+            // lg: 1024px
+            1024: {
+              slidesPerView: 3,
+            },
+            // xl: 1280px
+            1280: {
+              slidesPerView: 4,
+            },
+          },
+          spaceBetween: 32,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          loop: true,
+          autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+          },
+          speed: 800,
+          effect: "slide",
+        });
+      });
+    </script>
+  </body>
+</html>
