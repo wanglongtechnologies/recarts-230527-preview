@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <title>Recarts Imaging Sdn. Bhd.</title>
+    <meta
+      name="description"
+      content="Recarts is the #1 leading supplier, wholesaler, retailer and service provider (Rent Or Service) for branded printer and photocopy machines in Malaysia since 1985."
+    />
+    <meta name="author" content="WANGLONG Technologies Sdn. Bhd." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="../assets/css/general-sans.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </head>
+  <body
+    x-data="{ isMenuOpen: false }"
+    class="antialiased"
+    x-bind:class=" isMenuOpen ? 'overflow-hidden lg:overflow-auto' : ''"
+  >
+    <header class="relative z-50 bg-transparent">
+      <nav
+        class="flex items-center justify-between h-24 px-4 mx-auto sm:px-6 max-w-7xl lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="/home" class="-m-1.5 p-1.5 mt-1">
+            <span class="sr-only">Recarts Imaging Sdn. Bhd.</span>
+            <video width="300" height="40" autoplay loop muted>
+              <source src="../assets/video/logo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            @click="isMenuOpen = true"
+            type="button"
+            class="inline-flex items-center justify-center p-2 text-gray-700 bg-white rounded-full"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-8">
+          <a
+            href="/about"
+            class="text-base font-medium text-gray-200 transition hover:text-white"
+            >About us</a
+          >
+          <a
+            href="/products"
+            class="text-base font-medium text-gray-100 transition hover:text-white"
+            >Products</a
+          >
+          <a
+            href="/services"
+            class="text-base font-medium text-gray-200 transition hover:text-white"
+            >Services</a
+          >
+          <a
+            href="/contact"
+            class="text-base font-medium text-gray-100 transition hover:text-white"
+            >Contact us</a
+          >
+          <a
+            href="https://recarts.com.my/print-on-the-go/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center text-base font-medium text-gray-200 transition hover:text-white"
+            >Print on the go
+            <svg
+              class="ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.667"
+                d="m5.833 14.167 8.334-8.334m0 0H5.833m8.334 0v8.334"
+              />
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div
+          x-cloak
+          x-show="isMenuOpen"
+          x-transition.opacity.duration.150ms
+          class="fixed inset-0 z-10 bg-gray-900/50"
+        ></div>
+        <div
+          x-cloak
+          x-show="isMenuOpen"
+          x-transition:enter="transition ease-in-out duration-200 transform"
+          x-transition:enter-start="translate-x-10 opacity-0"
+          x-transition:enter-end="translate-x-0 opacity-100"
+          x-transition:leave="transition ease-in-out duration-200"
+          x-transition:leave-start="opacity-100 translate-x-0"
+          x-transition:leave-end="opacity-0 translate-x-10"
+          @click.outside="isMenuOpen = false"
+          class="fixed inset-y-0 right-0 z-10 flex flex-col w-full max-w-sm px-4 py-6 overflow-y-auto bg-white sm:px-6 sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-end mt-1">
+            <button
+              @click="isMenuOpen = false"
+              type="button"
+              class="p-2 text-gray-700 bg-gray-100 border border-gray-200 rounded-full"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flow-root h-full mt-6">
+            <div class="flex flex-col justify-between flex-1 h-full -my-6">
+              <div class="py-6 space-y-2">
+                <a
+                  href="/home"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Home</a
+                >
+                <a
+                  href="/about"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >About us</a
+                >
+                <a
+                  href="/products"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Products</a
+                >
+                <a
+                  href="/services"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Services</a
+                >
+                <a
+                  href="/contact"
+                  class="block px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Contact us</a
+                >
+
+                <a
+                  href="/wall-panels"
+                  class="flex items-center px-3 py-4 -mx-3 text-base font-medium text-gray-900"
+                  >Print on the go
+                  <svg
+                    class="ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.667"
+                      d="m5.833 14.167 8.334-8.334m0 0H5.833m8.334 0v8.334"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="hero" class="-mt-40">
+        <div class="relative pt-24 overflow-hidden bg-black">
+          <div
+            class="absolute inset-x-0 bottom-0 w-full h-full m-auto max-w-[1440px] max-h-[600px]"
+          >
+            <img
+              src="../assets/images/product-bg.png"
+              class="w-full h-full"
+              alt=""
+            />
+          </div>
+          <div
+            class="absolute right-[-10%] bottom-[-50%] lg:-bottom-1/4 m-auto max-w-[1440px] max-h-[600px] opacity-40"
+          >
+            <img
+              src="../assets/images/light-accent.png"
+              class="w-full h-full"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="relative z-10 max-w-4xl px-6 mx-auto -mb-8 pt-36 lg:max-w-7xl sm:px-6 lg:px-8"
+          >
+            <img
+              class="mx-auto"
+              src="../assets/images/products/HP-P77740dw.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section id="product-details" class="relative">
+        <div
+          class="max-w-3xl px-4 pt-12 mx-auto lg:max-w-7xl sm:px-6 lg:px-8 sm:pt-16 lg:pt-24"
+        >
+          <div class="grid lg:grid-cols-12 lg:gap-8">
+            <div class="lg:col-span-5 xl:col-span-4">
+              <h1 class="text-2xl font-heading sm:text-3xl">
+                HP PageWide Managed Color Multifunction Printer P77740dw
+                (W1B33D)
+              </h1>
+              <p class="mt-6 text-base text-gray-700 lg:text-lg">
+                Consistent print quality that maintains at an affordable cost
+                for all businesses.
+              </p>
+            </div>
+            <div class="w-full h-full lg:col-span-7 xl:col-start-6">
+              <ul class="mt-8 text-base text-gray-700 lg:mt-0 lg:text-lg">
+                <li class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_5908_146989)">
+                        <path
+                          d="M8.74967 14L12.2497 17.5L19.2497 10.5M25.6663 14C25.6663 20.4433 20.443 25.6666 13.9997 25.6666C7.55635 25.6666 2.33301 20.4433 2.33301 14C2.33301 7.55666 7.55635 2.33331 13.9997 2.33331C20.443 2.33331 25.6663 7.55666 25.6663 14Z"
+                          stroke="#DA3832"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_5908_146989">
+                          <rect width="28" height="28" rx="14" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p class="ml-4 text-base leading-6 text-gray-700 lg:text-lg">
+                    Print, copy, scan, fax
+                  </p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_5908_146989)">
+                        <path
+                          d="M8.74967 14L12.2497 17.5L19.2497 10.5M25.6663 14C25.6663 20.4433 20.443 25.6666 13.9997 25.6666C7.55635 25.6666 2.33301 20.4433 2.33301 14C2.33301 7.55666 7.55635 2.33331 13.9997 2.33331C20.443 2.33331 25.6663 7.55666 25.6663 14Z"
+                          stroke="#DA3832"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_5908_146989">
+                          <rect width="28" height="28" rx="14" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p class="ml-4 text-base leading-6 text-gray-700 lg:text-lg">
+                    HP PageWide Technology with pigmented inks
+                  </p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_5908_146989)">
+                        <path
+                          d="M8.74967 14L12.2497 17.5L19.2497 10.5M25.6663 14C25.6663 20.4433 20.443 25.6666 13.9997 25.6666C7.55635 25.6666 2.33301 20.4433 2.33301 14C2.33301 7.55666 7.55635 2.33331 13.9997 2.33331C20.443 2.33331 25.6663 7.55666 25.6663 14Z"
+                          stroke="#DA3832"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_5908_146989">
+                          <rect width="28" height="28" rx="14" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p class="ml-4 text-base leading-6 text-gray-700 lg:text-lg">
+                    High speed printing<br />
+                    Black: Up to 60 ppm (General office mode, A4); Up to 40 ppm
+                    (ISO, laser-comparable)<br />
+                    Colour: Up to 60 ppm (General office mode, A4); Up to 40 ppm
+                    (ISO, laser-comparable)<br />
+                    Duplex printing: Black/Colour (A4): Up to 28 ipm
+                  </p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_5908_146989)">
+                        <path
+                          d="M8.74967 14L12.2497 17.5L19.2497 10.5M25.6663 14C25.6663 20.4433 20.443 25.6666 13.9997 25.6666C7.55635 25.6666 2.33301 20.4433 2.33301 14C2.33301 7.55666 7.55635 2.33331 13.9997 2.33331C20.443 2.33331 25.6663 7.55666 25.6663 14Z"
+                          stroke="#DA3832"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_5908_146989">
+                          <rect width="28" height="28" rx="14" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p class="ml-4 text-base leading-6 text-gray-700 lg:text-lg">
+                    First page out<br />
+                    Black (A4, ready): As fast as 8 sec; Colour (A4, ready): As
+                    fast as 8 sec
+                  </p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_5908_146989)">
+                        <path
+                          d="M8.74967 14L12.2497 17.5L19.2497 10.5M25.6663 14C25.6663 20.4433 20.443 25.6666 13.9997 25.6666C7.55635 25.6666 2.33301 20.4433 2.33301 14C2.33301 7.55666 7.55635 2.33331 13.9997 2.33331C20.443 2.33331 25.6663 7.55666 25.6663 14Z"
+                          stroke="#DA3832"
+                          stroke-width="2.33333"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_5908_146989">
+                          <rect width="28" height="28" rx="14" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <p class="ml-4 text-base leading-6 text-gray-700 lg:text-lg">
+                    Embedded security feature
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="cta">
+        <div
+          class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:py-16 lg:py-24"
+        >
+          <div
+            class="relative px-6 py-10 overflow-hidden bg-black sm:px-16 sm:py-16 rounded-xl"
+          >
+            <div
+              class="absolute right-[-10%] -bottom-1/4 m-auto max-w-[1440px] max-h-[600px] opacity-30"
+            >
+              <img
+                src="../assets/images/light-accent.png"
+                class="w-full h-full"
+                alt=""
+              />
+            </div>
+            <div
+              class="relative z-10 lg:flex lg:items-center lg:justify-between"
+            >
+              <div class="max-w-xl mx-auto text-center lg:text-left lg:mx-0">
+                <h2 class="text-2xl text-white font-heading sm:text-3xl">
+                  Looking for Top-Notch Imaging Support?
+                </h2>
+                <p class="mt-4 text-base text-gray-200 sm:text-lg">
+                  Our technicians ensure minimal disruptions and optimal
+                  efficiency.
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-center mt-10 gap-x-6 lg:mt-0 lg:flex-shrink-0"
+              >
+                <a
+                  href="/contact"
+                  class="inline-flex items-center h-12 px-6 text-sm font-medium text-black transition rounded-lg bg-gray-50 hover:bg-white focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-white/50"
+                  >Connect with Experts</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
+      <div class="px-4 pt-4 pb-12 mx-auto lg:pt-12 sm:px-6 max-w-7xl lg:px-8">
+        <div class="lg:flex lg:justify-between">
+          <a href="/home" class="-m-1.5 p-1.5 mt-1">
+            <span class="sr-only">Recarts Imaging Sdn. Bhd.</span>
+            <video width="300" height="40" autoplay loop muted>
+              <source src="../assets/video/logo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </a>
+          <div class="hidden grid-cols-2 gap-8 mt-16 xl:col-span-2 xl:mt-0">
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold leading-6 text-white">
+                  Solutions
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Marketing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Analytics</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Commerce</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Insights</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-white">
+                  Support
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Pricing</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Documentation</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Guides</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >API Status</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 class="text-sm font-semibold leading-6 text-white">
+                  Company
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Jobs</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Press</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Partners</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-10 md:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-white">
+                  Legal
+                </h3>
+                <ul role="list" class="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Claim</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Privacy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm leading-6 text-gray-300 hover:text-white"
+                      >Terms</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-wrap items-center mt-8 gap-x-8 gap-y-6 sm:justify-normal lg:mt-0"
+          >
+            <a
+              href="/about"
+              class="text-base font-medium text-gray-200 transition hover:text-white"
+              >About us</a
+            >
+            <a
+              href="/products"
+              class="text-base font-medium text-gray-100 transition hover:text-white"
+              >Products</a
+            >
+            <a
+              href="/services"
+              class="text-base font-medium text-gray-200 transition hover:text-white"
+              >Services</a
+            >
+            <a
+              href="/contact"
+              class="text-base font-medium text-gray-100 transition hover:text-white"
+              >Contact us</a
+            >
+            <a
+              href="https://recarts.com.my/print-on-the-go/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center text-base font-medium text-gray-200 transition hover:text-white"
+              >Print on the go
+              <svg
+                class="ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.667"
+                  d="m5.833 14.167 8.334-8.334m0 0H5.833m8.334 0v8.334"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div
+          class="pt-8 mt-8 border-t border-gray-800 md:flex md:items-center md:justify-between"
+        >
+          <p class="text-sm leading-5 text-gray-400">
+            &copy; 2023 Recarts Imaging Sdn Bhd 201601005895 (1176821-T). All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

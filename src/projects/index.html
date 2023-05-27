@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <title>Milpro Consultancy</title>
+    <meta name="description" content="Description here" />
+    <meta name="author" content="Gideon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://unpkg.com/lightgallery@2.7.1/css/lightgallery-bundle.css"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  </head>
+  <body
+    x-data="{ isMenuOpen: false }"
+    class="antialiased"
+    x-bind:class=" isMenuOpen ? 'overflow-hidden lg:overflow-auto' : ''"
+  >
+    <header class="relative z-50 bg-transparent">
+      <nav
+        class="flex items-center justify-between h-24 px-4 mx-auto sm:px-6 max-w-7xl lg:px-8"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Milpro Consultancy</span>
+            <img
+              class="w-auto h-12"
+              src="../assets/images/logo/milpro-light.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            @click="isMenuOpen = true"
+            type="button"
+            class="inline-flex items-center justify-center p-2 text-gray-700 bg-white rounded-full"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="#"
+            class="text-base font-medium text-gray-200 transition hover:text-white"
+            >About us</a
+          >
+          <a
+            href="#"
+            class="text-base font-medium text-gray-200 transition hover:text-white"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="text-base font-medium text-gray-100 transition hover:text-white"
+            >Catalogue</a
+          >
+          <a
+            href="#"
+            class="text-base font-medium text-gray-200 transition hover:text-white"
+            >Wall panels</a
+          >
+          <a
+            href="#"
+            class="text-base font-medium text-gray-100 transition hover:text-white"
+            >Projects</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="/contact"
+            class="inline-flex items-center h-12 px-6 text-sm font-medium text-black transition bg-yellow-300 rounded-full hover:bg-yellow-400 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-yellow-300"
+            >Contact us</a
+          >
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div
+          x-show="isMenuOpen"
+          x-transition.opacity.duration.150ms
+          class="fixed inset-0 z-10 bg-gray-900/50"
+        ></div>
+        <div
+          x-show="isMenuOpen"
+          x-transition:enter="transition ease-in-out duration-200 transform"
+          x-transition:enter-start="translate-x-10 opacity-0"
+          x-transition:enter-end="translate-x-0 opacity-100"
+          x-transition:leave="transition ease-in-out duration-200"
+          x-transition:leave-start="opacity-100 translate-x-0"
+          x-transition:leave-end="opacity-0 translate-x-10"
+          @click.outside="isMenuOpen = false"
+          class="fixed inset-y-0 right-0 z-10 w-full px-4 py-6 overflow-y-auto bg-white sm:px-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-end mt-1">
+            <button
+              @click="isMenuOpen = false"
+              type="button"
+              class="p-2 text-gray-700 rounded-md"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="flow-root mt-6">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="py-6 space-y-2">
+                <a
+                  href="/home"
+                  class="block px-3 py-2 -mx-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50"
+                  >Home</a
+                >
+                <a
+                  href="/about"
+                  class="block px-3 py-2 -mx-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50"
+                  >About us</a
+                >
+                <a
+                  href="/services"
+                  class="block px-3 py-2 -mx-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50"
+                  >Services</a
+                >
+                <a
+                  href="/catalogue"
+                  class="block px-3 py-2 -mx-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50"
+                  >Catalogue</a
+                >
+                <a
+                  href="/wall-panels"
+                  class="block px-3 py-2 -mx-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50"
+                  >Wall panels</a
+                >
+                <a
+                  href="/projects"
+                  class="block px-3 py-2 -mx-3 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-50"
+                  >Projects</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="/contact"
+                  class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-medium text-gray-900 hover:bg-gray-50"
+                  >Contact us</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="hero" class="-mt-40">
+        <div
+          class="relative pt-24 overflow-hidden bg-gradient-to-r from-primary-blue-dark to-primary-blue-light"
+        >
+          <div class="absolute inset-0 m-auto max-w-[1440px] max-h-[600px]">
+            <img
+              src="../assets/images/hero_pattern.svg"
+              class="object-cover w-full h-full"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="relative z-10 max-w-4xl px-6 py-24 mx-auto lg:max-w-7xl sm:px-6 sm:py-32 lg:py-56 lg:px-8"
+          >
+            <h1
+              class="text-4xl font-normal text-center leading-tight tracking-tight text-white sm:text-5xl xl:text-6xl lg:leading-[1.125]"
+            >
+              Our
+              <span class="font-serif text-[1.3em] tracking-normal"
+                >selected</span
+              >
+              projects
+            </h1>
+          </div>
+        </div>
+      </section>
+      <section x-data="{ selectedCategory: 'hotel' }" id="projects">
+        <div
+          class="max-w-3xl px-4 py-16 mx-auto lg:max-w-7xl sm:px-6 lg:px-8 sm:py-24 lg:py-32"
+        >
+          <div>
+            <div class="sm:hidden">
+              <label for="tabs" class="sr-only">Select a tab</label>
+              <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
+              <select
+                id="tabs"
+                name="tabs"
+                class="block w-full py-2 pl-3 pr-10 text-base border-gray-300 rounded-md focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              >
+                <option>My Account</option>
+
+                <option>Company</option>
+
+                <option selected>Team Members</option>
+
+                <option>Billing</option>
+              </select>
+            </div>
+            <div class="hidden sm:block">
+              <div class="border-b border-gray-200">
+                <nav class="flex -mb-px space-x-8" aria-label="Tabs">
+                  <!-- Current: "border-primary-blue-dark text-border-primary-blue-dark", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
+
+                  <button
+                    @click="selectedCategory = 'hotel'"
+                    x-bind:class="selectedCategory === 'hotel' ? 'border-primary-blue-dark text-gray-900' : 'border-transparent text-gray-400 hover:border-gray-300 hover:text-gray-500'"
+                    class="px-1 py-4 text-sm font-medium transition border-b-2 whitespace-nowrap"
+                    aria-current="page"
+                  >
+                    Hotel
+                  </button>
+
+                  <button
+                    @click="selectedCategory = 'apartment'"
+                    x-bind:class="selectedCategory === 'apartment' ? 'border-primary-blue-dark text-gray-900' : 'border-transparent text-gray-400 hover:border-gray-300 hover:text-gray-500'"
+                    class="px-1 py-4 text-sm font-medium text-gray-400 transition border-b-2 whitespace-nowrap"
+                  >
+                    Service Apartments / Residences
+                  </button>
+
+                  <button
+                    @click="selectedCategory = 'retail'"
+                    x-bind:class="selectedCategory === 'retail' ? 'border-primary-blue-dark text-gray-900' : 'border-transparent text-gray-400 hover:border-gray-300 hover:text-gray-500'"
+                    class="px-1 py-4 text-sm font-medium text-gray-400 transition border-b-2 whitespace-nowrap"
+                  >
+                    Retail & Offices
+                  </button>
+                  <button
+                    @click="selectedCategory = 'restaurant'"
+                    x-bind:class="selectedCategory === 'restaurant' ? 'border-primary-blue-dark text-gray-900' : 'border-transparent text-gray-400 hover:border-gray-300 hover:text-gray-500'"
+                    class="px-1 py-4 text-sm font-medium text-gray-400 transition border-b-2 whitespace-nowrap"
+                  >
+                    Restaurant
+                  </button>
+                </nav>
+              </div>
+            </div>
+          </div>
+
+          <div
+            x-show="selectedCategory === 'hotel'"
+            class="grid gap-8 mt-8 lg:grid-cols-2"
+          >
+            <div>
+              <a
+                href="/catalogue/"
+                class="relative block overflow-hidden bg-gray-100 border border-gray-200 aspect-video rounded-2xl"
+              >
+                <img
+                  class="absolute inset-0 object-cover w-full h-full"
+                  src="../assets/images/MCL/DSC_0461.jpg"
+                  alt="Photo by Minh Pham on Unsplash"
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-gray-100/70 to-gray-100"
+                ></div>
+                <div
+                  class="relative z-10 flex flex-col justify-end h-full p-4 sm:p-6"
+                >
+                  <h3 class="text-lg font-medium tracking-tight sm:text-xl">
+                    Four Point @ Petaling Street
+                  </h3>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a
+                href="/catalogue/"
+                class="relative block overflow-hidden bg-gray-100 border border-gray-200 aspect-video rounded-2xl"
+              >
+                <img
+                  class="absolute inset-0 object-cover w-full h-full"
+                  src="../assets/images/minh-pham-7pCFUybP_P8-unsplash.jpg"
+                  alt="Photo by Minh Pham on Unsplash"
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-gray-100/70 to-gray-100"
+                ></div>
+                <div
+                  class="relative z-10 flex flex-col justify-end h-full p-4 sm:p-6"
+                >
+                  <h3 class="text-lg font-medium tracking-tight sm:text-xl">
+                    Four Point @ Petaling Street
+                  </h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            x-show="selectedCategory === 'apartment'"
+            class="grid gap-8 mt-8 lg:grid-cols-2"
+          >
+            <div>
+              <a
+                href="/catalogue/"
+                class="relative block overflow-hidden bg-gray-100 border border-gray-200 aspect-video rounded-2xl"
+              >
+                <img
+                  class="absolute inset-0 object-cover w-full h-full"
+                  src="../assets/images/minh-pham-7pCFUybP_P8-unsplash.jpg"
+                  alt="Photo by Minh Pham on Unsplash"
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-gray-100/70 to-gray-100"
+                ></div>
+                <div
+                  class="relative z-10 flex flex-col justify-end h-full p-4 sm:p-6"
+                >
+                  <h3 class="text-lg font-medium tracking-tight sm:text-xl">
+                    Four Point @ Petaling Street
+                  </h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            x-show="selectedCategory === 'retail'"
+            class="grid gap-8 mt-8 lg:grid-cols-2"
+          >
+            <div>
+              <a
+                href="/catalogue/"
+                class="relative block overflow-hidden bg-gray-100 border border-gray-200 aspect-video rounded-2xl"
+              >
+                <img
+                  class="absolute inset-0 object-cover w-full h-full"
+                  src="../assets/images/MCL/DSC_0461.jpg"
+                  alt="Photo by Minh Pham on Unsplash"
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-gray-100/70 to-gray-100"
+                ></div>
+                <div
+                  class="relative z-10 flex flex-col justify-end h-full p-4 sm:p-6"
+                >
+                  <h3 class="text-lg font-medium tracking-tight sm:text-xl">
+                    Four Point @ Petaling Street
+                  </h3>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a
+                href="/catalogue/"
+                class="relative block overflow-hidden bg-gray-100 border border-gray-200 aspect-video rounded-2xl"
+              >
+                <img
+                  class="absolute inset-0 object-cover w-full h-full"
+                  src="../assets/images/minh-pham-7pCFUybP_P8-unsplash.jpg"
+                  alt="Photo by Minh Pham on Unsplash"
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-gray-100/70 to-gray-100"
+                ></div>
+                <div
+                  class="relative z-10 flex flex-col justify-end h-full p-4 sm:p-6"
+                >
+                  <h3 class="text-lg font-medium tracking-tight sm:text-xl">
+                    Four Point @ Petaling Street
+                  </h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            x-show="selectedCategory === 'restaurant'"
+            class="grid gap-8 mt-8 lg:grid-cols-2"
+          >
+            <div>
+              <a
+                href="/catalogue/"
+                class="relative block overflow-hidden bg-gray-100 border border-gray-200 aspect-video rounded-2xl"
+              >
+                <img
+                  class="absolute inset-0 object-cover w-full h-full"
+                  src="../assets/images/MCL/DSC_0461.jpg"
+                  alt="Photo by Minh Pham on Unsplash"
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent via-gray-100/70 to-gray-100"
+                ></div>
+                <div
+                  class="relative z-10 flex flex-col justify-end h-full p-4 sm:p-6"
+                >
+                  <h3 class="text-lg font-medium tracking-tight sm:text-xl">
+                    Four Point @ Petaling Street
+                  </h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials">
+        <div
+          class="relative bg-gradient-to-br from-primary-blue-dark to-primary-blue-light"
+        >
+          <div class="absolute inset-0">
+            <img
+              class="object-cover w-full h-full mx-auto max-w-[1440px]"
+              src="../assets/images/pattern.svg"
+              alt=""
+            />
+          </div>
+          <div class="py-16 overflow-hidden swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col items-center justify-center h-56 px-4 pb-16 sm:px-6 lg:px-8 sm:h-64 lg:h-72"
+                >
+                  <img
+                    class="w-auto h-8 sm:h-10 lg:h-12"
+                    src="../assets/images/logo/affin-bank.svg"
+                    alt="Affin Bank"
+                  />
+                  <p
+                    class="max-w-2xl mt-12 text-2xl font-medium text-center text-white lg:max-w-4xl lg:text-3xl"
+                  >
+                    Our office space was transformed with furniture that
+                    perfectly embodies our brand's ethos.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col items-center justify-center h-56 px-4 pb-16 sm:px-6 lg:px-8 sm:h-64 lg:h-72"
+                >
+                  <img
+                    class="w-auto h-8 sm:h-10 lg:h-12"
+                    src="../assets/images/logo/affin-bank.svg"
+                    alt="Affin Bank"
+                  />
+                  <p
+                    class="max-w-2xl mt-12 text-2xl font-medium text-center text-white lg:max-w-4xl lg:text-3xl"
+                  >
+                    The furniture has transformed our space and created a more
+                    welcoming environment for our clients.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col items-center justify-center h-56 px-4 pb-16 sm:px-6 lg:px-8 sm:h-64 lg:h-72"
+                >
+                  <img
+                    class="w-auto h-8 sm:h-10 lg:h-12"
+                    src="../assets/images/logo/affin-bank.svg"
+                    alt="Affin Bank"
+                  />
+                  <p
+                    class="max-w-2xl mt-12 text-2xl font-medium text-center text-white lg:max-w-4xl lg:text-3xl"
+                  >
+                    Milpro delivered high-quality furniture solutions that
+                    elevated our workspace aesthetics.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section id="cta">
+        <div
+          class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:py-24 lg:py-32"
+        >
+          <div class="lg:flex lg:items-center lg:justify-between">
+            <div class="max-w-xl mx-auto text-center lg:text-left lg:mx-0">
+              <h2 class="text-3xl font-medium sm:text-4xl">
+                Transform
+                <span class="font-serif text-[1.3em] tracking-normal"
+                  >your</span
+                >
+                space today
+              </h2>
+              <p class="mt-6 text-base text-gray-700 sm:text-lg">
+                Get in touch today to discuss how we can help transform your
+                space into a more productive and welcoming environment.
+              </p>
+            </div>
+            <div
+              class="flex items-center justify-center mt-10 gap-x-6 lg:mt-0 lg:flex-shrink-0"
+            >
+              <a
+                href="/contact"
+                class="inline-flex items-center h-12 px-6 text-sm font-medium text-black transition bg-yellow-300 rounded-full hover:bg-yellow-400 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-yellow-300"
+                >Get free quotes</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-gray-200 bg-gray-50">
+      <div class="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center lg:justify-between">
+          <a href="#" class="-m-1.5 p-1.5 flex-shrink-0 hidden lg:inline-block">
+            <span class="sr-only">Milpro Consultancy</span>
+            <img
+              class="w-auto h-12"
+              src="../assets/images/logo/milpro-dark.svg"
+              alt=""
+            />
+          </a>
+          <nav
+            class="-mb-6 text-center columns-3 md:flex md:justify-center md:space-x-12"
+            aria-label="Footer"
+          >
+            <div class="pb-6">
+              <a
+                href="/about"
+                class="text-gray-600 transition hover:text-gray-900"
+                >About us</a
+              >
+            </div>
+
+            <div class="pb-6">
+              <a
+                href="/services"
+                class="text-gray-600 transition hover:text-gray-900"
+                >Services</a
+              >
+            </div>
+
+            <div class="pb-6">
+              <a
+                href="/catalogue"
+                class="text-gray-600 transition hover:text-gray-900"
+                >Catalogue</a
+              >
+            </div>
+
+            <div class="pb-6">
+              <a
+                href="/wall-panels"
+                class="text-gray-600 transition hover:text-gray-900"
+                >Wall panels</a
+              >
+            </div>
+
+            <div class="pb-6">
+              <a
+                href="/projects"
+                class="text-gray-600 transition hover:text-gray-900"
+                >Projects</a
+              >
+            </div>
+
+            <div class="pb-6">
+              <a
+                href="/contact"
+                class="text-gray-600 transition hover:text-gray-900"
+                >Contact us</a
+              >
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          loop: true,
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+          },
+          speed: 800,
+          effect: "slide",
+        });
+      });
+    </script>
+  </body>
+</html>
