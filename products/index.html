@@ -243,11 +243,15 @@
           </div>
         </div>
       </section>
-      <section x-data="{ selectedCategory: 'hp' }" id="projects">
+      <section
+        x-data="{ selectedCategory: 'hp' }"
+        id="projects"
+        class="overflow-hidden"
+      >
         <div
-          class="max-w-3xl px-4 py-16 mx-auto lg:max-w-7xl sm:px-6 lg:px-8 sm:py-24 lg:py-32"
+          class="max-w-3xl px-4 py-16 mx-auto overflow-hidden lg:max-w-7xl sm:px-6 lg:px-8 sm:py-24 lg:py-32"
         >
-          <div class="swiper-container">
+          <div class="overflow-hidden swiper-container">
             <nav class="swiper-wrapper" aria-label="Tabs">
               <button
                 @click="selectedCategory = 'hp'"
