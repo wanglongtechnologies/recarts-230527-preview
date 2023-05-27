@@ -1,10 +1,10 @@
 @font-face {
   font-family: "GeneralSans";
-  src: url("https://wanglongtechnologies.github.io/recarts-230527-preview/fonts/GeneralSans-Medium.woff2")
+  src: url("https://wanglongtechnologies.github.io/recarts-230527-preview/assets/fonts/GeneralSans-Medium.woff2")
       format("woff2"),
-    url("https://wanglongtechnologies.github.io/recarts-230527-preview/fonts/GeneralSans-Medium.woff")
+    url("https://wanglongtechnologies.github.io/recarts-230527-preview/assets/fonts/GeneralSans-Medium.woff")
       format("woff"),
-    url("https://wanglongtechnologies.github.io/recarts-230527-preview/fonts/GeneralSans-Medium.ttf")
+    url("https://wanglongtechnologies.github.io/recarts-230527-preview/assets/fonts/GeneralSans-Medium.ttf")
       format("truetype");
   font-weight: 500;
   font-display: swap;
