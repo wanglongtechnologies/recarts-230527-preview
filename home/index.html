@@ -106,7 +106,7 @@
               </div>
             </div>
             <div class="mt-16">
-              <img class="mx-auto" src="/recarts-230527-preview/assets/images/products/HP-A3.png" alt="Image for HP A3" />
+              <img class="mx-auto" src="/recarts-230527-preview/assets/images/products/HPA3.png" alt="Image for HP A3" />
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@
             <div class="swiper-wrapper">
               <template x-for="model in featured">
                 <div class="swiper-slide">
-                  <a :href="'/recarts-230527-preview/assets/product/?brand=HP&model=' + model" class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl">
+                  <a :href="'/recarts-230527-preview/product/?brand=HP&model=' + model" class="relative flex flex-col items-center px-6 overflow-hidden focus:outline-none group rounded-2xl">
                     <div class="transition h-72 grayscale group-hover:grayscale-0">
                       <img class="object-contain w-full h-full" :src="'/recarts-230527-preview/assets/images/products/full/' + brands['HP'].products[model].image" :alt="'Image for ' + brands['HP'].products[model].name" />
                     </div>

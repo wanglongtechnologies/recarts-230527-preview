@@ -116,7 +116,7 @@
               <div x-show="selectedCategory === (index + 1)" class="grid gap-8 lg:grid-cols-4">
                 <template x-for="(key, index) in Object.keys(brands[brand].products)">
                   <div>
-                    <a :href="'/recarts-230527-preview/assets/product/?brand=' + brand + '&model=' + key" class="relative flex flex-col items-center px-6 pb-8 overflow-hidden border border-gray-200 group rounded-2xl">
+                    <a :href="'/recarts-230527-preview/product/?brand=' + brand + '&model=' + key" class="relative flex flex-col items-center px-6 pb-8 overflow-hidden border border-gray-200 group rounded-2xl">
                       <div class="transition h-72 grayscale group-hover:grayscale-0">
                         <img class="object-contain w-full h-full" :src="'/recarts-230527-preview/assets/images/products/full/' + brands[brand].products[key].image" :alt="'Image for ' + brands[brand].products[key].name" />
                       </div>
