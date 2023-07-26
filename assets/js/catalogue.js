@@ -74,7 +74,7 @@ document.addEventListener('alpine:init', () => {
         },
       },
       Canon: {
-        logo: '/assets/images/categories/canon.svg',
+        logo: '/recarts-230527-preview/assets/images/categories/canon.svg',
         products: {
           'CANON-IRAdv-C5250': {
             id: 'CANON-IRAdv-C5250',
