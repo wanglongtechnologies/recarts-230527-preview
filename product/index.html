@@ -85,14 +85,14 @@
       <section id="hero" class="-mt-40">
         <div class="relative pt-24 overflow-hidden bg-gradient-to-b from-black via-black to-gray-950">
           <div class="absolute inset-x-0 -bottom-24 md:-bottom-16 xl:-bottom-10 w-full h-full m-auto max-w-[1440px] max-h-[600px]">
-            <img src="/recarts-230527-preview/assets/images/product-bg.png" class="object-contain w-full h-full" alt="Image of product glow effect" />
+            <img src="/recarts-230527-preview/assets/images/product-bg.png" class="object-contain w-full h-full" alt="Product glow effect" />
           </div>
           <div class="absolute right-[-10%] bottom-[-50%] lg:-bottom-1/4 m-auto max-w-[1440px] max-h-[600px] opacity-40">
-            <img src="/recarts-230527-preview/assets/images/light-accent.png" class="object-contain w-full h-full" alt="Image of background glow effect" />
+            <img src="/recarts-230527-preview/assets/images/light-accent.png" class="object-contain w-full h-full" alt="Background glow effect" />
           </div>
 
           <div x-data="{ width: 0, height: 0 }" :class="width > height ? '-mb-8' : '-mb-56'" class="relative z-10 max-w-[700px] px-6 mx-auto pt-36 sm:px-6 lg:px-8">
-            <img x-ref="image" class="object-contain w-full h-full" @load="width = $refs.image.width; height = $refs.image.height" :src="'/recarts-230527-preview/assets/images/products/transparent/' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].image" :alt="'Image for ' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].name" alt="" />
+            <img x-ref="image" class="object-contain w-full h-full" @load="width = $refs.image.width; height = $refs.image.height" :src="'/recarts-230527-preview/assets/images/products/transparent/' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].image" :alt="'Picture of ' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].name" />
           </div>
         </div>
       </section>
@@ -103,7 +103,7 @@
               <h1 class="text-2xl font-heading sm:text-3xl" x-text="brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].name"></h1>
               <p class="mt-6 text-base text-gray-700 lg:text-lg" x-text="brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].tagline"></p>
               <a :href="'/recarts-230527-preview/assets/datasheets/' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].name + '.pdf'" target="_blank" class="mt-6 w-full inline-flex items-center justify-center gap-x-2 rounded-md bg-bloodMoon-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bloodMoon-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bloodMoon-600">
-                Download datasheet
+                View datasheet
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="-mr-0.5 h-5 w-5">
                   <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
                 </svg>
@@ -137,7 +137,7 @@
         <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:py-16 lg:py-24">
           <div class="relative px-6 py-10 overflow-hidden bg-gradient-to-b from-black via-black to-gray-950 sm:px-16 sm:py-16 rounded-xl">
             <div class="absolute right-[-10%] -bottom-1/4 m-auto max-w-[1440px] max-h-[600px] opacity-30">
-              <img src="/recarts-230527-preview/assets/images/light-accent.png" class="w-full h-full" alt="Image of background glow effect" />
+              <img src="/recarts-230527-preview/assets/images/light-accent.png" class="w-full h-full" alt="Background glow effect" />
             </div>
             <div class="relative z-10 lg:flex lg:items-center lg:justify-between">
               <div class="max-w-xl mx-auto text-center lg:text-left lg:mx-0">
