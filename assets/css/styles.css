@@ -1495,6 +1495,14 @@ select {
   padding-top: 2rem;
 }
 
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1711,6 +1719,11 @@ select {
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.hover\:border-bloodMoon-600:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(216 52 50 / var(--tw-border-opacity));
 }
 
 .hover\:bg-bloodMoon-500:hover {
