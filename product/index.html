@@ -94,8 +94,8 @@
             <img src="/recarts-230527-preview/assets/images/light-accent.png" class="object-contain w-full h-full" alt="" />
           </div>
 
-          <div class="relative z-10 max-w-[700px] px-6 mx-auto -mb-8 pt-36 sm:px-6 lg:px-8">
-            <img class="object-contain w-full h-full" :src="'/recarts-230527-preview/assets/images/products/cropped/' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].image" :alt="'Image for ' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].name" />
+          <div x-data="{ width: 0, height: 0 }" :class="width > height ? '-mb-8' : '-mb-56'" class="relative z-10 max-w-[700px] px-6 mx-auto pt-36 sm:px-6 lg:px-8">
+            <img x-ref="image" class="object-contain w-full h-full" @load="width = $refs.image.width; height = $refs.image.height" :src="'/recarts-230527-preview/assets/images/products/transparent/' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].image" :alt="'Image for ' + brands[new URL(window.location.href).searchParams.get('brand')].products[new URL(window.location.href).searchParams.get('model')].name" alt="" />
           </div>
         </div>
       </section>
